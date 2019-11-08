@@ -7,7 +7,7 @@ use App\User;
 use Auth ;
 use Illuminate\Http\Request;
 use App\Mail\JobCreated;
-use Illuminate\Support\Facades\Mail;
+use Mail;
 
 class JobController extends Controller
 {
@@ -85,7 +85,7 @@ class JobController extends Controller
 
             Mail::to(auth()->user()->email)->send(
 
-                new toHR($user,$job,$jobCount)
+                new JobCreated($user,$job,$jobCount)
     
             );
 
