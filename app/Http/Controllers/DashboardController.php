@@ -7,7 +7,7 @@ use App\User;
 use App\Role;
 use Auth;
 
-class HomeController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -29,7 +29,7 @@ class HomeController extends Controller
         $user = User::find(auth()->user()->id);
         $role = $user->role()->first()->name;
         
-        return view('home')->with(compact("role"));
+        return view('dashboard')->with(compact("role"));
         
     }
 }

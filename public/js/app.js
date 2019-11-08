@@ -49372,6 +49372,17 @@ var app = new Vue({
   el: '#app'
 });
 
+if (document.getElementById("ckeditor")) {
+  CKEDITOR.replace("ckeditor");
+}
+
+$(document).ready(function () {
+  $('table tr').click(function () {
+    window.location = $(this).data('href');
+    return false;
+  });
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

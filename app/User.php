@@ -42,4 +42,36 @@ class User extends Authenticatable
         return $this->belongsTo("App\Role", "role_id");
     }
 
+    public function job(){
+        return $this->hasMany("App\Job", "id");
+    }
+
+    public function isMod()
+    {
+        $user = User::find(auth()->user()->id);
+        $role = $user->role()->first()->name;
+
+        if($role==="job board moderator"){
+            return true;
+        }
+        else{
+            return false;
+        }
+        
+    }
+
+    public function isHR()
+    {
+        $user = User::find(auth()->user()->id);
+        $role = $user->role()->first()->name;
+
+        if($role==="hr manager"){
+            return true;
+        }
+        else{
+            return false;
+        }
+        
+    }
+
 }

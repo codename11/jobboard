@@ -17,20 +17,32 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+Route::resource("jobs", "JobController");
+/*Gornje je identicno donjem.*/
+/*
+Route::get('/jobs', "JobController@index");
+Route::get('/jobs/create', "JobController@create");
+Route::get('/jobs/{id}', "JobController@show");
+Route::post('/jobs', "JobController@store");
+Route::get('/jobs/{id}/edit', "JobController@edit");
+Route::put('/jobs/{id}', "JobController@update");
+Route::delete('/jobs/{id}', "JobController@destroy");
+*/
