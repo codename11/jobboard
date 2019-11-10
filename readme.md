@@ -5,36 +5,6 @@ Put this into root of your server. I used xammp, but there is no trouble to make
 
 ## Prerequisites:
 You'll need a xampp installation, composer installed and nmp package manager. 
-To disable exploitation and to emulate live conditions go to `c:\windows\system32\drivers\etc `
-and modify file named hosts. In it add following lines (at the bottom):
-
-1. 127.0.0.1 localhost 
-2. 127.0.0.1 reactapp.test
-First means it's going to be served locally and second is name of project.
-
-Second(server configuration), go to `c:\xampp\apache\conf\extra\` and open httpd-vhosts file.
-In it, at the bottom, add these lines:
-
-1. 
-```
-<VirtualHost *:80>
-
-    DocumentRoot "C:/xampp/htdocs"
-    ServerName localhost
-    
-</VirtualHost>
-```
-2. and 
-```
-<VirtualHost *:80>
-
-    DocumentRoot "C:/xampp/htdocs/reactapp/public"
-    ServerName reactapp.test
-    
-</VirtualHost>
-```
-
-For instructions for using React in Laravel(alongside with Ajax) use this [resource](https://www.freecodecamp.org/forum/t/how-to-manual-for-react-in-laravel-an-upgrade-with-ajax/314297).
 
 No third party libraries have been used.
 
@@ -47,7 +17,7 @@ Install(in this order):
 3. gitbash(for running terminal)
 4. npm(node package manager which can also been used for React and sass)
 5. Run xampp, both apache and mysql
-6. Create db named `reactapp`
+6. Create db named `jobboard`
 7. In .env file set these variables
 ```
 DB_DATABASE=jobboard
