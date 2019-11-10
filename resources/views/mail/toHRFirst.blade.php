@@ -1,12 +1,14 @@
 @component('mail::message')
-# New Post: {{$job->title}}
+# Job: {{$job->title}}
 
 {!!$job->description!!}
 
 @component('mail::button', ['url' => url("/jobs/".$job->id)])
-View Post
+View Job Post
 @endcomponent
-<p>You job post is under moderation</p>
+<p>Your job post is under moderation</p>
+
+<p>Your first {{$jobCount}} {{$jobCount===1 ? "job is" : "jobs are"}}{{" awaiting moderation"}}</p>
 
 Thanks,<br>
 {{$user->name}}<br>

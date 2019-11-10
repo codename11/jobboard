@@ -1,12 +1,12 @@
 @component('mail::message')
-# New Post: {{$job->title}}
+# Job: {{$job->title}}
 
 {!!$job->description!!}
 
 @component('mail::button', ['url' => url("/jobs/".$job->id)])
 View Post
 @endcomponent
-<p>asdasd</p>
+<p>Your job post is published</p>
 
 Thanks,<br>
 {{$user->name}}<br>

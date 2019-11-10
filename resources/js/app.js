@@ -4,7 +4,7 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+import './bootstrap';
 
 window.Vue = require('vue');
 
@@ -36,8 +36,10 @@ if(document.getElementById("ckeditor")){
 }
 
 $(document).ready(function(){
+
     $('table tr').click(function(){
         window.location = $(this).data('href');
         return false;
     });
+
 });

@@ -68,6 +68,11 @@ class JobPolicy
         return $user->isHR() || $user->isMod();
     }
 
+    public function status(User $user)
+    {
+        return $user->isMod();
+    }
+
     /**
      * Determine whether the user can restore the job.
      *

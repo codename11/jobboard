@@ -43,7 +43,7 @@ class User extends Authenticatable
     }
 
     public function job(){
-        return $this->hasMany("App\Job", "id");
+        return $this->hasMany("App\Job");
     }
 
     public function isMod()

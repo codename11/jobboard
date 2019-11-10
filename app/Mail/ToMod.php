@@ -8,11 +8,11 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use App\User;
 
-class ToHRFirst extends Mailable
+class ToMod extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $user;
+    public $mod;
     public $job;
     public $jobCount;
     /**
@@ -20,9 +20,9 @@ class ToHRFirst extends Mailable
      *
      * @return void
      */
-    public function __construct($user,$job,$jobCount)
+    public function __construct($mod,$job,$jobCount)
     {
-        $this->user = $user;
+        $this->mod = $mod;
         $this->job = $job;
         $this->jobCount = $jobCount;
     }
@@ -34,6 +34,6 @@ class ToHRFirst extends Mailable
      */
     public function build()
     {
-        return $this->markdown('mail.toHRFirst');
+        return $this->markdown('mail.toMod');
     }
 }

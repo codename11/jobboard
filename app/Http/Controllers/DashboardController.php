@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Role;
+use App\Job;
 use Auth;
 
 class DashboardController extends Controller
@@ -29,7 +30,8 @@ class DashboardController extends Controller
         $user = User::find(auth()->user()->id);
         $role = $user->role()->first()->name;
         
-        return view('dashboard')->with(compact("role"));
+        $jobs = Job::where("status", "=", "0")->get();
+        return view('dashboard')->with(compact("role", "jobs"));
         
     }
 }

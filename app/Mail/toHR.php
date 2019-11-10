@@ -8,9 +8,10 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use App\User;
 
-class toHR extends Mailable
+class ToHR extends Mailable
 {
     use Queueable, SerializesModels;
+
     public $user;
     public $job;
     public $jobCount;

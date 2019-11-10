@@ -11,6 +11,7 @@ use App\User;
 class JobCreated extends Mailable
 {
     use Queueable, SerializesModels;
+    
     public $user;
     public $job;
     public $jobCount;

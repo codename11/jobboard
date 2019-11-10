@@ -5,7 +5,7 @@
     
     @if(count($jobs)>0)
         <div class="container">
-            <table class="table table-hover table-bordered table-dark table-striped">
+            <table class="table table-hover table-bordered table-dark table-striped tableBordered">
                 <thead>
                 <tr>
                     <th>Title</th>

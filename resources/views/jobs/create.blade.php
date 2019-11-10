@@ -12,7 +12,7 @@
         <!-- https://laravel.com/docs/5.7/validation#available-validation-rules -->
         <div class="form-group">
             <label for="title">Title:</label> <!--Ovo u 'value' atributu da prilikom neuspesne validacije zapamti staru vrednost iz polja.-->
-            <input class="form-control {{$errTitle}}" type="text" name="title" placeholder="Post title" required value="{{old('title')}}">
+            <input class="form-control {{$errTitle}}" type="text" name="title" placeholder="Title" required value="{{old('title')}}">
         </div>
         <div class="form-group">
             <label for="description">Description:</label>
@@ -21,7 +21,7 @@
 
         <div class="form-group">
             <label for="email">Email address:</label>
-            <input type="email" class="form-control" name="email" id="email" required>
+            <input type="email" class="form-control" name="email" placeholder="Email" id="email" required>
         </div>
 
         <div>
