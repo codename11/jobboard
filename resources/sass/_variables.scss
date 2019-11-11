@@ -149,3 +149,12 @@ html, body {
     right: 0px;
     top: 0px;
 }
+
+.btnWrap{
+    display: block;
+}
+
+.btnWrap > a{
+    display: inline;
+    margin: 20px;
+}

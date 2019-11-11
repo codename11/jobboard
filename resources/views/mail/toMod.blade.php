@@ -8,8 +8,10 @@ Dashboard
 @endcomponent
 <p>This job post is awaiting your moderation</p>
 
-<!--<a href="/dashboard/{{$job->id}}/approve" class="btn btn-outline-primary">Approve</a><br/>
-<a href="/dashboard/{{$job->id}}/spam" class="btn btn-outline-warning">Spam</a><br/>-->
+<div class="btnWrap">
+    <a href="http://jobboard.test/dashboard/{{$job->id}}/approve"><button>Approve</button></a>
+    <a href="http://jobboard.test/dashboard/{{$job->id}}/spam"><button>Spam</button></a>
+</div>
 
 Thanks,<br>
 {{$mod->name}}<br>

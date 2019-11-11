@@ -141,6 +141,15 @@ body {
   top: 0px;
 }
 
+.btnWrap {
+  display: block;
+}
+
+.btnWrap > a {
+  display: inline;
+  margin: 20px;
+}
+
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
