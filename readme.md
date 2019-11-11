@@ -73,6 +73,10 @@ This image is depicting a welcome page and if you are logged, in the top right c
 An example image depicting of custom email notification template. Depending on context image can vary.
 ![Email](8.png)
 
+### Update:
+Added approve and spam buttons for job postings into email template that actually work.
+![Email1](9.png)
+
 ## Technologies used:
 
 1. Laravel
