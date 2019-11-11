@@ -230,4 +230,25 @@ class JobController extends Controller
         }
         
     }
+
+    public function statusApprove(Request $request, $id){
+
+        $this->authorize('status', Job::class);
+        $job = Job::find($id);
+        $job->status = 1;
+        $job->save();
+        return redirect("/jobs")->with("success", "Job Post Approved. ");
+
+    }
+
+    public function statusSpam(Request $request, $id){
+
+        $this->authorize('status', Job::class);
+        $job = Job::find($id);
+        $job->status = 0;
+        $job->save();
+        return redirect("/jobs")->with("success", "Job Post Unapproved. ");
+
+    }
+
 }

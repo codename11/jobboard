@@ -39,3 +39,6 @@ Route::resource("jobs", "JobController");
 
 Route::put("/dashboard/{id}", "JobController@status");
 
+Route::get("/dashboard/{id}/approve", "JobController@statusApprove");
+
+Route::put("/dashboard/{id}/spam", "JobController@statusSpam");
