@@ -74,7 +74,7 @@ An example image depicting of custom email notification template. Depending on c
 ![Email](8.png)
 
 ### Update:
-Added approve and spam buttons for job postings into email template that actually work.
+Added approve and spam buttons for job postings into email template that actually work directly from template itself as depicted in image below.
 ![Email1](9.png)
 
 ## Technologies used:
