@@ -4,40 +4,42 @@
 
     
     @if(count($jobs)>0)
-        <div class="container">
-            <table class="table table-hover table-bordered table-dark table-striped tableBordered table-responsive">
-                <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Description</th>
-                    <th>Email</th>
-                    <th>Created at</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach ($jobs as $job)
-                    <tr data-href="/jobs/{{$job->id}}">
-                        <td>{{$job->title}}</td>
-                        <td>
-                        <?php
-
-                            if(strlen($job->description)>20){
-                                $description = substr($job->description,0,20)."<a href='/jobs/{{$job->id}}'>...Read more</a>";
-                                echo $description;
-                            }
-                            else{
-                                echo $job->description;
-                            }
-
-                        ?>
-                        </td>
-                        <td>{{$job->email}}</td>
-                        <td>{{$job->created_at->format('d/m/Y')}} @ {{$job->created_at->format('H:m:s')}}</td>
-                    
+        <div class="container ">
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered table-dark table-striped tableBordered">
+                    <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Email</th>
+                        <th>Created at</th>
                     </tr>
-                @endforeach
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                    @foreach ($jobs as $job)
+                        <tr data-href="/jobs/{{$job->id}}">
+                            <td>{{$job->title}}</td>
+                            <td>
+                            <?php
+
+                                if(strlen($job->description)>20){
+                                    $description = substr($job->description,0,20)."<a href='/jobs/{{$job->id}}'>...Read more</a>";
+                                    echo $description;
+                                }
+                                else{
+                                    echo $job->description;
+                                }
+
+                            ?>
+                            </td>
+                            <td>{{$job->email}}</td>
+                            <td>{{$job->created_at->format('d/m/Y')}} @ {{$job->created_at->format('H:m:s')}}</td>
+                        
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
             {{$jobs->links()}}<!--Ovo je za paginaciju.-->
         </div>
         @else
